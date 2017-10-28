@@ -1,0 +1,212 @@
+body, html {
+  height: 100%;
+  margin: 0px;
+	font-family: 'Raleway', sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+	color: black;
+	font-family: 'Josefin Slab', serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: left;
+  margin: 0;
+  padding: 20px 0;
+  color: #4A708B;
+
+}
+
+h2 {
+  position: absolute;
+  top: 200 px;
+  left: 0 px;
+  font-size: 18px;
+  color: #4A708B;
+}
+
+footer {
+  margin: 10px;
+	font-family: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: right;
+}
+
+p {
+  font-size: 9px;
+  font-family: 'Raleway', sans-serif;
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+
+/*********** GRID ************/
+
+.wrapper {
+  display: grid;
+  justify-items: left;
+  grid-template-columns: 80px auto 400px;
+  grid-auto-rows: minmax(50px, auto);
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
+}
+
+.NavBar {
+  justify-items: left;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+}
+
+.LeftSideBar {
+  margin-left: 30px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.MainGrid {
+  justify-content: center
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.RightSideBar {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  align-items: center;
+}
+
+
+
+/*********** NAV BAR ************/
+
+#store {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  text-decoration: none;
+  color: #4A708B;
+  font-size: 20px;
+}
+
+#about {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  text-decoration: none;
+  color: #4A708B;
+  font-size: 20px;
+}
+
+#searchBar{
+  grid-column-start: 3;
+  grid-column-end: 3;
+  text-decoration: none;
+  color: #4A708B;
+}
+
+/*********** PRODUCT GRID ***********/
+
+
+#shapeHeader{
+  grid-column-start: 4;
+  grid-column-end: 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+#productHeader{
+  grid-column-start: 2;
+
+}
+
+#flavorText{
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  margin: 20px;
+  grid-gap: 20px;
+
+}
+
+#customOrderForm{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, 100px);
+  grid-gap: 20px;
+}
+
+
+
+/*********** BUTTONS & lINKS ************/
+
+.shapes:hover {
+  border: 2px solid teal;
+
+}
+
+.button {
+  border-radius: 4px;
+  background-color: teal;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  padding: 12px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#customOrderForm {
+  display:none
+
+}

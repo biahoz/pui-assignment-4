@@ -1,0 +1,148 @@
+body, html {
+    height: 100%;
+    margin: 0px;
+}
+
+/*********** LANDING PAGE ************/
+
+
+h2 span {
+   color: white;
+   font: bold 24px/45px Raleway, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+}
+
+h2 span.spacer {
+   padding:0 5px;
+}
+
+main {
+  margin: 0px;
+	font-family: 'Raleway', sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+	color: black;
+	font-family: 'Josefin Slab', serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: left;
+  margin: 0;
+  padding: 20px 0;
+  color: #4A708B;
+
+}
+
+footer {
+  margin: 10px;
+	font-family: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: right;
+}
+
+
+p {
+  font-size: 9px;
+  font-family: 'Raleway', sans-serif;
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+/*********** GRID ************/
+
+.wrapper {
+  display: grid;
+  height: 500px;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*grid-template-rows: repeat(5, 100px);*/
+  align-items: center;
+
+  grid-column-gap: 10px;
+  /*grid-row-gap: 1em;*/
+
+  background-image: url("images/breather-7171-smallcrop.png");
+  max-height: 100%;
+  /* Center and scale the image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.leftSideBar {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  /*grid-row-start: 1;
+  grid-row-end: 5;*/
+}
+
+.mainGrid {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  /*grid-row-start: 1;
+  grid-row-end: 5;*/
+
+}
+
+.rightSideBar {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  /*grid-row-start: 1;
+  grid-row-end: 5;*/
+
+}
+
+
+/*********** BUTTONS ************/
+
+.button {
+  position: absolute;
+  top: 320px;
+  border-radius: 4px;
+  background-color: teal;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  padding: 12px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
